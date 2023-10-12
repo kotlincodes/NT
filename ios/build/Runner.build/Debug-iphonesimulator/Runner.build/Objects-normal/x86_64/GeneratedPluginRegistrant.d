@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/ios/Runner/GeneratedPluginRegistrant.m \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/ios/Runner/GeneratedPluginRegistrant.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Modules/module.modulemap \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngineGroup.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/sayandhkp/Desktop/Examples/nymble_test/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/Flutter.h

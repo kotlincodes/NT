@@ -1,0 +1,63 @@
+{
+    "app":{
+       "theme":"light"
+    },
+    "widgets":[
+       {
+          "type":"banner",
+          "image":"https://www.shutterstock.com/image-vector/example-banner-vector-image-260nw-1841256889.jpg",
+          "header_text":"New Recipe",
+          "footer_text":"Cook Chicken Curry",
+          "footer_icon":true
+       },
+       {
+          "type":"banner",
+          "color":"FF0000",
+          "header_text":"Meal Planner",
+          "footer_text":"Plan your meals",
+          "footer_icon":false
+       },
+       {
+          "type":"horizontal_list",
+          "title":"Collections",
+          "items":[
+             {
+                "type":"circular_item",
+                "text":"Breakfast",
+                "image":"https://path/to/image.png"
+             },
+             {
+                "type":"circular_item",
+                "text":"Meat Based",
+                "image":"https://path/to/image.png"
+             },
+             {
+                "type":"circular_item",
+                "text":"Vegan",
+                "image":"https://path/to/image.png"
+             }
+          ]
+       },
+       {
+          "type":"horizontal_list",
+          "title":"Cuisines",
+          "items":[
+             {
+                "type":"box_item",
+                "text":"American",
+                "image":"https://path/to/image.png"
+             },
+             {
+                "type":"box_item",
+                "text":"Italian",
+                "image":"https://path/to/image.png"
+             },
+             {
+                "type":"box_item",
+                "text":"Thai",
+                "image":"https://path/to/image.png"
+             }
+          ]
+       }
+    ]
+ }

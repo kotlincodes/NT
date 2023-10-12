@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "21271500457bd4632a5f197d4ba040fe27a34db88bf3ab962ab112fb4ea2b3e9"
+build_start_time: [1697120875, 490190029]
+build_end_time: [1697120875, 543157100]
+inputs:
+  "/Users/sayandhkp/Desktop/Examples/nymble_test/ios/Runner/AppDelegate.swift": !private [1632117121, 648401737]
