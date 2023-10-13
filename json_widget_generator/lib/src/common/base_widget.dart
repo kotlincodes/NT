@@ -4,6 +4,7 @@ import 'package:json_widget_generator/json_widget_generator.dart';
 import 'package:json_widget_generator/src/model/base_model.dart';
 
 abstract class BaseWidget extends StatelessWidget {
+  EdgeInsets get margin;
   BaseModel get getDataModel;
   Map get getData;
   final Widget child;

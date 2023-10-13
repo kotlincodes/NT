@@ -16,7 +16,7 @@ class BannerModel extends BaseModel {
     color = data["color"];
     footerText = data["footer_text"];
     footerIcon = data["footer_icon"];
-    borderRadius = data["borderRadius"];
+    borderRadius = double.tryParse(data["border_radius"].toString() ?? "");
     padding = data["padding"];
   }
 

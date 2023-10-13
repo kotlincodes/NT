@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:json_widget_generator/src/click_listener/generator_click_listener.dart';
 import 'package:json_widget_generator/src/core/children/banner_widget.dart';
+import 'package:json_widget_generator/src/core/children/horizontal_list.dart';
 
 class WidgetBuilderFactory {
   static List<Widget> buildWidgetList(List<dynamic> jsonList,
@@ -12,7 +13,12 @@ class WidgetBuilderFactory {
           list.add(BannerWidget.build(
             data: item,
             margin: margin,
+            clickListener: clickListener,
           ));
+        }
+
+        if (item["type"] == SupportedWidgetTypes.horizontal_list.name) {
+          list.add(HorizontalList());
         }
       }
     }
@@ -21,7 +27,8 @@ class WidgetBuilderFactory {
 }
 
 enum SupportedWidgetTypes {
-  banner("banner");
+  banner("banner"),
+  horizontal_list("horizontal_list");
 
   const SupportedWidgetTypes(this.name);
   final String name;

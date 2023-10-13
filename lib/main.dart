@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: WidgetGenerator.build1(
+      body: WidgetGenerator.generate(
         json: json ?? "",
         clickListener: _ClickListener(),
         margin: const EdgeInsets.only(bottom: 10),
@@ -54,5 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class _ClickListener implements GeneratorClickListener {
   @override
-  void onClick(Map<dynamic, dynamic> data) {}
+  void onClick(Map<dynamic, dynamic> data) {
+    print(data);
+  }
 }

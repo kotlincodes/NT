@@ -7,7 +7,6 @@ import 'package:json_widget_generator/src/click_listener/generator_click_listene
 import 'package:json_widget_generator/src/core/children/invalid_widget.dart';
 import 'package:json_widget_generator/src/core/children/widget_builder_factory.dart';
 
-// ignore: must_be_immutable
 class WidgetGenerator extends StatelessWidget {
   final String json;
   final GeneratorClickListener? clickListener;
@@ -20,7 +19,7 @@ class WidgetGenerator extends StatelessWidget {
     return _buildWidget();
   }
 
-  WidgetGenerator.build1(
+  WidgetGenerator.generate(
       {required this.json,
       this.clickListener,
       this.margin = const EdgeInsets.only(bottom: 10)});
