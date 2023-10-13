@@ -6,25 +6,29 @@ import 'package:json_widget_generator/src/model/banner_model.dart';
 import 'package:json_widget_generator/src/model/base_model.dart';
 
 class BannerWidget extends BaseWidget {
-  final GeneratorClickListener? clickListener;
-  final Map data;
   final EdgeInsets margin;
 
   BannerWidget.build({
     required this.margin,
-    this.clickListener,
-    required this.data,
+    required WidgetSettingBuilder widgetSettingBuilder,
   }) : super.builder(
+            widgetSettings:
+                WidgetSettings(widgetSettingBuilder: widgetSettingBuilder),
             child: _Banner(
-          bannerModel: BannerModel.fromMap(data),
-          margin: margin,
-        ));
+              bannerModel: BannerModel.fromMap(widgetSettingBuilder.data),
+              margin: margin,
+            ));
 
   @override
   Map get getData => getDataModel.toMap;
 
   @override
-  BaseModel get getDataModel => BannerModel.fromMap(data);
+  BaseModel get getDataModel => BannerModel.fromMap(widgetSettings.data);
+
+  @override
+  set margin(EdgeInsets margin) {
+    margin;
+  }
 }
 
 class _Banner extends StatelessWidget {
@@ -33,8 +37,10 @@ class _Banner extends StatelessWidget {
   const _Banner({required this.bannerModel, required this.margin});
   @override
   Widget build(BuildContext context) {
-    return bannerModel.isValidData
-        ? Container(
+    return
+        // bannerModel.isValidData
+        //     ?
+        Container(
             padding: EdgeInsets.all(bannerModel.padding ?? 12),
             margin: margin,
             width: double.infinity,
@@ -61,10 +67,10 @@ class _Banner extends StatelessWidget {
                       fit: BoxFit.cover,
                     )
                   : null,
-            ))
-        : InvalidWidget(
-            text: bannerModel.validationErrorMessage,
-          );
+            ));
+    // : InvalidWidget(
+    //     text: bannerModel.validationErrorMessage,
+    //   );
   }
 }
 

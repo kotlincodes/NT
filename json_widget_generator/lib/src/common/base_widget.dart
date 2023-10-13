@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:json_widget_generator/json_widget_generator.dart';
+import 'package:json_widget_generator/src/core/children/invalid_widget.dart';
 
 import 'package:json_widget_generator/src/model/base_model.dart';
 
 abstract class BaseWidget extends StatelessWidget {
-  EdgeInsets get margin;
+  final WidgetSettings widgetSettings;
+  void set margin(EdgeInsets margin);
   BaseModel get getDataModel;
   Map get getData;
   final Widget child;
-  final GeneratorClickListener? clickListener;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: child,
+      child: getDataModel.isValidData
+          ? child
+          : InvalidWidget(
+              text: getDataModel.validationErrorMessage,
+            ),
       onTap: () {
-        if (clickListener != null) {
-          clickListener?.onClick(getData);
+        if (widgetSettings.clickListener != null) {
+          widgetSettings.clickListener?.onClick(getData);
         }
       },
     );
   }
 
-  BaseWidget.builder({required this.child, this.clickListener});
+  BaseWidget.builder({required this.child, required this.widgetSettings});
 }

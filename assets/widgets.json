@@ -24,7 +24,7 @@
           "title":"Collections",
           "items":[
              {
-                "type":"circular_item",
+                "type":"box_item",
                 "text":"Breakfast",
                 "image":"https://path/to/image.png"
              },
