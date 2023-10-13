@@ -62,7 +62,9 @@ class _Banner extends StatelessWidget {
                     )
                   : null,
             ))
-        : InvalidWidget();
+        : InvalidWidget(
+            text: bannerModel.validationErrorMessage,
+          );
   }
 }
 
