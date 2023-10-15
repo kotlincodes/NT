@@ -64,6 +64,7 @@ class _CircularItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: LabeledGlobalKey("circular_item"),
       margin: EdgeInsets.only(right: 2),
       width: 120,
       child: Column(
@@ -100,6 +101,7 @@ class _BoxItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: LabeledGlobalKey("box_item"),
       width: 120,
       margin: EdgeInsets.only(right: 12, left: 12),
       child: Card(
