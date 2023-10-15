@@ -30,7 +30,7 @@
              },
              {
                 "type":"circular_item",
-                "text":"Meat Based",
+               
                 "image":"https://path/to/image.png"
              },
              {
@@ -39,6 +39,42 @@
                 "image":"https://path/to/image.png"
              }
           ]
+       },
+       {
+         "type":"banner_carousal",
+         "items":[
+            {
+               "type":"banner",
+               "image":"https://www.shutterstock.com/image-vector/example-banner-vector-image-260nw-1841256889.jpg",
+               "header_text":"New Recipe",
+               "footer_text":"Cook Chicken Curry",
+               "footer_icon":true
+            },
+            {
+               "type":"banner",
+               "color":"FF0000",
+               "header_text":"Meal Planner",
+               "footer_text":"Plan your meals",
+               "border_radius" : 6,
+               "padding":12,
+               "footer_icon":false
+            },
+            {
+               "type":"banner",
+               "image":"https://www.shutterstock.com/image-vector/example-banner-vector-image-260nw-1841256889.jpg",
+               "header_text":"New Recipe",
+               "footer_text":"Cook Chicken Curry",
+               "footer_icon":true
+            },
+            {
+               "type":"banner",
+               "color":"FF0000",
+               "footer_text":"Plan your meals",
+               "border_radius" : 6,
+               "padding":12,
+               "footer_icon":false
+            }
+         ]
        },
        {
           "type":"horizontal_list",
@@ -50,15 +86,45 @@
                 "image":"https://path/to/image.png"
              },
              {
-                "type":"box_item",
-                "text":"Italian",
+                "type":"circular_item",
+               
                 "image":"https://path/to/image.png"
              },
              {
                 "type":"box_item",
                 "text":"Thai",
                 "image":"https://path/to/image.png"
-             }
+             },
+             {
+               "type":"box_item",
+               "text":"American",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"circular_item",
+               "text":"Italian",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"box_item",
+               "text":"Thai",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"box_item",
+               "text":"American",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"circular_item",
+               "text":"Italian",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"box_item",
+               "text":"Thai",
+               "image":"https://path/to/image.png"
+            }
           ]
        }
     ]
