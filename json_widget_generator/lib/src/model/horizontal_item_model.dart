@@ -8,9 +8,6 @@ class HorizontalListModel extends BaseModel {
       items != null && items?.isNotEmpty == true && title != null;
 
   @override
-  Map get toMap => {};
-
-  @override
   String get validationErrorMessage => isValidData ? "" : "Invalid list items";
 
   HorizontalListModel.fromMap(Map data)
@@ -24,9 +21,6 @@ class HorizontalItemModel extends BaseModel {
   final String? image;
   @override
   bool get isValidData => type != null && image != null && text != null;
-
-  @override
-  Map get toMap => throw UnimplementedError();
 
   @override
   String get validationErrorMessage => isValidData ? "" : "Invalid Item Data";

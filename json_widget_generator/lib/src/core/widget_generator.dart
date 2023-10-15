@@ -8,6 +8,12 @@ import 'package:json_widget_generator/src/core/children/invalid_widget.dart';
 import 'package:json_widget_generator/src/core/children/widget_builder_factory.dart';
 
 class WidgetGenerator extends StatelessWidget {
+  /// Expected list of widgets in json String
+  /// example
+  /// ` "{
+  /// "widgets":[ ]
+  /// }" `
+
   final String json;
   final GeneratorClickListener? clickListener;
 

@@ -23,20 +23,11 @@ class HorizontalList extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: horizontalListModel.items!.map((e) {
-                    HorizontalItemModel horizontalItemModel =
-                        HorizontalItemModel.fromMap(e);
-
                     WidgetSettings widgetSettings = WidgetSettings(
                         widgetSettingBuilder: widgetSettingBuilder..data = e);
 
                     return _HorizontalItem.build(
                         widgetSettings: widgetSettings);
-                    // : SizedBox(
-                    //     width: 200,
-                    //     child: InvalidWidget(
-                    //         text:
-                    //             horizontalItemModel.validationErrorMessage),
-                    // );
                   }).toList(),
                 ),
               ),
@@ -55,9 +46,6 @@ class _HorizontalItem extends BaseWidget {
             child: widgetSettings.data["type"] == "circular_item"
                 ? _CircularItem(data: widgetSettings.data)
                 : _BoxItem(data: widgetSettings.data));
-
-  @override
-  Map get getData => widgetSettings.data;
 
   BaseModel get getDataModel =>
       HorizontalItemModel.fromMap(widgetSettings.data);
@@ -81,17 +69,23 @@ class _CircularItem extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Icon(
-                Icons.list_alt,
-                size: 60,
+          Expanded(
+            child: Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Icon(
+                  Icons.list_alt,
+                  size: 60,
+                ),
               ),
+              shape: CircleBorder(),
             ),
-            shape: CircleBorder(),
           ),
-          Text(itemModel.text!)
+          Text(
+            itemModel.text!,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          )
         ],
       ),
     );
@@ -106,9 +100,11 @@ class _BoxItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 120,
       margin: EdgeInsets.only(right: 12, left: 12),
       child: Card(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -117,7 +113,11 @@ class _BoxItem extends StatelessWidget {
                 size: 60,
               ),
             ),
-            Text(itemModel.text!)
+            Text(
+              itemModel.text!,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            )
           ],
         ),
       ),

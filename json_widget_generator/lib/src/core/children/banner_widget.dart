@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:json_widget_generator/src/click_listener/generator_click_listener.dart';
 import 'package:json_widget_generator/src/common/base_widget.dart';
-import 'package:json_widget_generator/src/core/children/invalid_widget.dart';
 import 'package:json_widget_generator/src/model/banner_model.dart';
 import 'package:json_widget_generator/src/model/base_model.dart';
 
@@ -20,9 +18,6 @@ class BannerWidget extends BaseWidget {
             ));
 
   @override
-  Map get getData => getDataModel.toMap;
-
-  @override
   BaseModel get getDataModel => BannerModel.fromMap(widgetSettings.data);
 
   @override
@@ -37,40 +32,33 @@ class _Banner extends StatelessWidget {
   const _Banner({required this.bannerModel, required this.margin});
   @override
   Widget build(BuildContext context) {
-    return
-        // bannerModel.isValidData
-        //     ?
-        Container(
-            padding: EdgeInsets.all(bannerModel.padding ?? 12),
-            margin: margin,
-            width: double.infinity,
-            height: 200,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _HeadingWidget(headingText: bannerModel.headerText ?? ""),
-                _FooterWidget(
-                  footerText: bannerModel.footerText ?? "",
-                  enableFooterIcon: bannerModel.footerIcon == true,
+    return Container(
+        padding: EdgeInsets.all(bannerModel.padding ?? 12),
+        margin: margin,
+        width: double.infinity,
+        height: 200,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _HeadingWidget(headingText: bannerModel.headerText ?? ""),
+            _FooterWidget(
+              footerText: bannerModel.footerText ?? "",
+              enableFooterIcon: bannerModel.footerIcon == true,
+            )
+          ],
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(bannerModel.borderRadius ?? 26),
+          color: bannerModel.colorValue,
+          image: bannerModel.image != null
+              ? DecorationImage(
+                  image: NetworkImage(bannerModel.image!),
+                  fit: BoxFit.cover,
                 )
-              ],
-            ),
-            decoration: BoxDecoration(
-              borderRadius:
-                  BorderRadius.circular(bannerModel.borderRadius ?? 26),
-              color: bannerModel.colorValue,
-              image: bannerModel.image != null
-                  ? DecorationImage(
-                      image: NetworkImage(bannerModel.image!),
-                      fit: BoxFit.cover,
-                    )
-                  : null,
-            ));
-    // : InvalidWidget(
-    //     text: bannerModel.validationErrorMessage,
-    //   );
+              : null,
+        ));
   }
 }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_widget_generator/src/click_listener/generator_click_listener.dart';
+import 'package:json_widget_generator/src/core/children/banner_carousal.dart';
 import 'package:json_widget_generator/src/core/children/banner_widget.dart';
 import 'package:json_widget_generator/src/core/children/horizontal_list.dart';
 import 'package:json_widget_generator/src/model/base_model.dart';
@@ -26,6 +27,14 @@ class WidgetBuilderFactory {
             widgetSettingBuilder: widgetSettingBuilder,
           ));
         }
+
+        if (item["type"] == SupportedWidgetTypes.banner_carousal.name) {
+          list.add(
+              BannerCarousal.build(widgetSettingBuilder: widgetSettingBuilder));
+        }
+        list.add(SizedBox(
+          height: 36,
+        ));
       }
     }
     return list;
@@ -34,7 +43,8 @@ class WidgetBuilderFactory {
 
 enum SupportedWidgetTypes {
   banner("banner"),
-  horizontal_list("horizontal_list");
+  horizontal_list("horizontal_list"),
+  banner_carousal("banner_carousal");
 
   const SupportedWidgetTypes(this.name);
   final String name;

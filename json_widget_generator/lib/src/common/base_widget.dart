@@ -7,7 +7,7 @@ abstract class BaseWidget extends StatelessWidget {
   final WidgetSettings widgetSettings;
   void set margin(EdgeInsets margin);
   BaseModel get getDataModel;
-  Map get getData;
+  Map get getData => widgetSettings.data;
   final Widget child;
 
   @override

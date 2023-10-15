@@ -32,15 +32,4 @@ class BannerModel extends BaseModel {
   @override
   String get validationErrorMessage =>
       isValidData ? '' : 'Required params missing';
-
-  @override
-  Map get toMap => {
-        "image": image,
-        "header_text": headerText,
-        "color": color,
-        "footer_text": footerText,
-        "footer_icon": footerIcon,
-        "border_radius": borderRadius,
-        "padding": padding
-      };
 }
