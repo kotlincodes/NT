@@ -10,15 +10,7 @@
           "footer_text":"Cook Chicken Curry",
           "footer_icon":true
        },
-       {
-          "type":"banner",
-          "color":"FF0000",
-          "header_text":"Meal Planner",
-          "footer_text":"Plan your meals",
-          "border_radius" : 6,
-          "padding":12,
-          "footer_icon":false
-       },
+      
        {
           "type":"horizontal_list",
           "title":"Collections",
@@ -40,6 +32,37 @@
              }
           ]
        },
+       {
+         "type":"banner",
+         "color":"FF0000",
+         "header_text":"Meal Planner",
+         "footer_text":"Plan your meals",
+         "border_radius" : 6,
+         "padding":12,
+         "footer_icon":false
+      },
+
+      {
+         "type":"horizontal_list",
+         "title":"Collections",
+         "items":[
+            {
+               "type":"box_item",
+               "text":"AAAA",
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"circular_item",
+              
+               "image":"https://path/to/image.png"
+            },
+            {
+               "type":"circular_item",
+               "text":"ABC",
+               "image":"https://path/to/image.png"
+            }
+         ]
+      },
        {
          "type":"banner_carousal",
          "items":[

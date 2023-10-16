@@ -36,7 +36,7 @@ class _Banner extends StatelessWidget {
         padding: EdgeInsets.all(bannerModel.padding ?? 12),
         margin: margin,
         width: double.infinity,
-        height: 200,
+        height: MediaQuery.of(context).size.height * 4 / 10,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
@@ -55,7 +55,7 @@ class _Banner extends StatelessWidget {
           image: bannerModel.image != null
               ? DecorationImage(
                   image: NetworkImage(bannerModel.image!),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fitWidth,
                 )
               : null,
         ));

@@ -38,10 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: WidgetGenerator.generate(
-        json: Utils.jsonData ?? "",
-        clickListener: _ClickListener(),
-        margin: const EdgeInsets.only(bottom: 10),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: WidgetGenerator.generate(
+          json: Utils.jsonData ?? "",
+          clickListener: _ClickListener(),
+          margin: const EdgeInsets.only(bottom: 10),
+        ),
       ),
     );
   }
